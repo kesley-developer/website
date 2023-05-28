@@ -1,0 +1,71 @@
+<!-- TO BE CONTINUE... -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kesley Developer | Sobre</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="icon" href="../imgs/logo.png" type="img/png">
+</head>
+<body>
+    <main>
+        <div class="illustration">
+            <span>
+                <ul>
+                    <li><img src="../imgs/pc.png" alt="computer image"><p>Assistência</p></li>
+                    <li><img src="../imgs/sos.png" alt="windows & linux image"><p>SO</p></li>
+                    <li><img src="../imgs/office.png" alt="office package image"><p>Office</p></li>
+                    <li><img src="../imgs/screwdriver.png" alt="screwdriver image"><p>Reparos</p></li>
+                    <li><img src="../imgs/mainboard.png" alt="mainboard image"><p>Configuração</p></li>
+                    <li><img src="../imgs/lupe.png" alt="lupe image"><p>Revisão</p></li>
+                    <li><img src="../imgs/backend.png" alt="python, c-sharp & .net logo"><p>Back-end</p></li>
+                    <li><img src="../imgs/frontend.png" alt="html, css & javascript logo"><p>Front-end</p></li>
+                    <li><img src="../imgs/db.png" alt="database mysql logo"><p>Front-end</p></li>
+                </ul>
+            </span>
+        </div>
+        <div class="content">                        
+            <span class="logo">
+                <figure>
+                    <img src="../imgs/logo.png" alt="logo image">                        
+                </figure>
+            </span>            
+            <div class="infos">            
+                <div class="text">
+                    <h3>Sobre</h3>
+                    <p>Este projeto foi desenvolvido por <a href="https://www.linkedin.com/in/kesley-keven-18358a1bb/" target="_blank">Kesley Developer</a>, e tem como objetivo apresentar as ferramentas de aprendizado e manuseio para aqueles que procuram profissionais na área de tecnológia</p>                
+                </div>            
+                <div class="list">
+                    <ul>
+                        <li><a href="../pages/support.html">Suporte técnico</a></li>
+                        <li><a href="../pages/maintenance.html">Manutenção</a></li>
+                        <li><a href="../pages/development.html">Desenvolvimento</a></li>
+                    </ul> 
+                </div>                                    
+            </div>           
+        </div>                                        
+    </main>        
+    <script>
+        function focusImgs(){
+            let imgs = document.querySelectorAll(".illustration li");
+            
+            i = 0;
+            let animation = setInterval(function(){
+                imgs.forEach(imgs =>{                    
+                    imgs.style.opacity = "50%";
+                })                
+                imgs[i].style.opacity = "100%";
+                
+                i += 1;
+                if(i == imgs.length){
+                    i = 0;
+                }
+            },1000)
+        }        
+        focusImgs();
+    </script>
+</body>
+</html>

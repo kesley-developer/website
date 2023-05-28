@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kesley Developer | Soluções Tecnológicas</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="imgs/logo.png" type="img/png">
+</head>
+<body>
+    <main>                        
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="#" id="link-contact">Contato</a></li>
+                    <li><a href="#" id="link-about">Sobre</a></li>                    
+                    <li><a href="pages/CV.pdf" target="_blank">CV</a></li>
+                </ul>
+            </nav>
+        </div>        
+        <div class="content">                                                            
+            <span class="logo">
+                <figure>
+                    <img src="imgs/logo.png" alt="logo image">                        
+                </figure>
+            </span>            
+            <div class="infos">                                                
+                <div class="text">                    
+                    <i>Soluções tecnológicas em TI</i>                                                                                
+                </div>                                        
+                <div class="list">                    
+                    <nav>
+                        <ul>
+                            <li><a href="pages/support.html">Suporte técnico</a></li>
+                            <li><a href="pages/maintenance.html">Manutenção</a></li>
+                            <li><a href="pages/development.html">Desenvolvimento</a></li>
+                        </ul>                                    
+                    </nav>
+                </div>                                
+            </div>           
+            <div class="link-infos">
+                <span>
+                    <i></i>
+                </span>                
+            </div>                                                                                                                     
+        </div>   
+        <div class="illustration">
+            <span>
+                <i>Acesse e saiba mais</i>
+                <ul>
+                    <li><img src="imgs/pc.png" alt="computer image"><p>Assistência</p></li>
+                    <li><img src="imgs/sos.png" alt="windows & linux image"><p>SO</p></li>
+                    <li><img src="imgs/office.png" alt="office package image"><p>Office</p></li>
+                    <li><img src="imgs/screwdriver.png" alt="screwdriver image"><p>Reparos</p></li>
+                    <li><img src="imgs/mainboard.png" alt="mainboard image"><p>Configuração</p></li>
+                    <li><img src="imgs/lupe.png" alt="lupe image"><p>Revisão</p></li>
+                    <li><img src="imgs/backend.png" alt="python, c-sharp & .net logo"><p>Back-end</p></li>
+                    <li><img src="imgs/frontend.png" alt="html, css & javascript logo"><p>Front-end</p></li>
+                    <li><img src="imgs/db.png" alt="database mysql logo"><p>Banco de dados</p></li>
+                </ul>
+            </span>            
+        </div>
+        <div class="contact">            
+            <div class="box-text">                                
+                <span>
+                    <h3>Entre em contato</h3>                
+                </span>            
+                <span>
+                    <button id="close-contact">X</button>
+                </span>
+            </div>
+            <div class="icons">
+                <nav>
+                    <ul>
+                        <li id="whatsapp"><a href="https://api.whatsapp.com/send?phone=5511975474415" target="_blank"><img src="imgs/whatsapp_icon.png" alt="whatsapp icon"></a></li>
+                        <li id="linkedin"><a href="https://www.linkedin.com/in/kesley-keven-18358a1bb/" target="blank"><img src="imgs/linkedin_logo.png" alt="linkedin icon"></a></li>
+                        <li id="facebook"><a href="https://facebook.com/profile.php?id=100075921954846" target="_blank"><img src="imgs/facebook_icon.png" alt="facebook icon"></a></li>                        
+                    </ul>
+                </nav>
+            </div>
+        </div>    
+        <div class="about">        
+            <div>
+                <button id="close-about">X</button>
+            </div>                                           
+            <div class="top">                   
+                <span>                    
+                    <h1>Sobre</h1>
+                    <i>Informações do projeto</i>
+                </span>
+            </div>
+            <div class="informations">                                
+                <span>
+                    <h2>Projeto</h2>
+                    <p>Este projeto foi desenvolvido por <a href="https://www.linkedin.com/in/kesley-keven-18358a1bb/" target="_blank">Kesley Developer</a>, e tem como objetivo apresentar as ferramentas de dominio relacionadas a tecnologia para aqueles que procuram profissionais na área de tecnologia da informação(TI).</p>
+                </span>           
+                <span>                
+                    <h3>Quem é Kesley Developer?</h3>                    
+                    <p>Kesley Developer é um estudante de tecnologia, que atualmente segue estudando a área de programação e desenvolvimento.</p>
+                </span>                             
+                <span class="symbol">
+                    <img src="imgs/about.png" alt="about symbol">
+                    <i>A cópia ou alteração deste projeto é proibida</i>
+                </span>
+            </div>                                 
+        </div>                        
+    </main>        
+    <script>        
+        function focusImgs(){
+            let imgsList = document.querySelectorAll(".illustration li");                        
+
+            i = 0;
+            let animation = setInterval(function(){
+                imgsList.forEach(imgsList =>{                    
+                    imgsList.style.opacity = "50%";                                                                              
+                })                
+                imgsList[i].style.opacity = "100%";                                        
+                
+                i += 1;
+                if(i == imgsList.length){
+                    i = 0;
+                }
+            },1000)
+        }        
+        focusImgs();                          
+
+        function linksInfos(){            
+            let links = document.querySelectorAll(".list a");                                    
+            let infos = document.querySelector(".link-infos i");
+                        
+            for(let i=0;i < links.length; i+=1){
+                links[i].addEventListener("mouseover",function(){
+                    if(i == 0){
+                        infos.textContent = "Suporte focado em softwares e apoio na resolução de problemas";
+                    
+                    }else if(i == 1){
+                        infos.textContent = "Manutenção de microcomputadores e analise de situações";
+                    
+                    }else if(i == 2){
+                        infos.textContent = "Desenvolvimento back-end e front-end baseados em web e sistemas";
+                    }
+                })
+
+                links[i].addEventListener("mouseout",function(){
+                    infos.textContent = "";
+                })
+            }
+        }
+        linksInfos();        
+
+        function contactView(){
+            let open = document.querySelector("#link-contact");
+            let contact = document.querySelector(".contact");
+            let close = document.querySelector(".contact #close-contact");    
+
+            open.addEventListener("click",function(){                                
+                contact.style.height = "100px";  
+                
+            })
+
+            close.addEventListener("click",function(){                
+                contact.style.height = "0";    
+                
+            })
+        }
+        contactView();
+
+        function aboutView(){
+            let open = document.querySelector("#link-about");
+            let about = document.querySelector(".about");
+            let close = document.querySelector(".about #close-about");
+
+            open.addEventListener("click",function(){
+                about.style.display = "block";
+            })
+
+            close.addEventListener("click",function(){
+                about.style.display = "none";
+            })
+        }
+        aboutView();
+        
+    </script>
+</body>
+</html>

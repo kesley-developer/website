@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kesley Developer | Feedback</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="icon" href="../imgs/logo.png" type="img/png">
+</head>
+<body>
+    <main>                        
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="#" id="link-contact">Contato</a></li>
+                    <li><a href="#" id="link-about">Sobre</a></li>
+                    <li><a href="#" onclick="window.history.back()">Voltar</a></li>
+                </ul>
+            </nav>
+        </div>        
+        <div class="content">                                                            
+            <span class="logo">
+                <figure>
+                    <img src="../imgs/logo.png" alt="logo image">                        
+                </figure>
+            </span>            
+            <div class="infos">                                                
+                <div class="text">                                        
+                    <span>
+                        <i>Deixe seu feedback</i>                                                                                
+                    </span>
+                    <div class="formulary">                                                                            
+                        <span>
+                            <img src="../imgs/interrogation.png" alt="interrogation symbol">
+                            <h4>Avalie</h4>
+                        </span>
+                        <form action="">
+                            <fieldset>                                                              
+                                <legend>Seu feedback é importante</legend>
+                                <div>
+                                    <label>Qual sua avaliação referente ao projeto?</label>
+                                    <div class="radio-buttons">
+                                        <span>
+                                            <input type="radio" value="positiva" name="avaliation" id="rad-0" required>
+                                            <label for="rad-0">
+                                                <div class="rad-btn"></div>
+                                                <span>Positiva</span>
+                                            </label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" value="razoavel" name="avaliation" id="rad-1" required>
+                                            <label for="rad-1">
+                                                <div class="rad-btn"></div>
+                                                <span>Razoável</span>
+                                            </label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" value="negativa" name="avaliation" id="rad-2" required>
+                                            <label for="rad-2">
+                                                <div class="rad-btn"></div>
+                                                <span>Negativa</span>
+                                            </label>
+                                        </span>
+                                    </div>
+                                </div>                                                                                                
+                                <div class="send-frm">
+                                    <input type="submit">
+                                    <span class="instruction">
+                                        <p>Escolha uma opção</p>
+                                    </span>
+                                </div>                                                                
+                            </fieldset>                                                        
+                        </form>                                 
+                    </div>                      
+                    <div class="frm-img">
+                        <img src="http://cdn.onlinewebfonts.com/svg/img_574534.png" alt="user icon">
+                    </div>                                                                       
+                </div>                                                        
+            </div>                                                                                                                                      
+        </div>           
+        <div class="contact">            
+            <div class="box-text">                                
+                <span>
+                    <h3>Entre em contato</h3>                
+                </span>            
+                <span>
+                    <button id="close-contact">X</button>
+                </span>
+            </div>
+            <div class="icons">
+                <nav>
+                    <ul>
+                        <li id="whatsapp"><a href="https://api.whatsapp.com/send?phone=5511975474415" target="_blank"><img src="../imgs/whatsapp_icon.png" alt="whatsapp icon"></a></li>
+                        <li id="linkedin"><a href="https://www.linkedin.com/in/kesley-keven-18358a1bb/" target="blank"><img src="../imgs/linkedin_logo.png" alt="linkedin icon"></a></li>
+                        <li id="facebook"><a href="https://facebook.com/profile.php?id=100075921954846" target="_blank"><img src="../imgs/facebook_icon.png" alt="facebook icon"></a></li>                        
+                    </ul>
+                </nav>
+            </div>
+        </div>    
+        <div class="about">        
+            <div>
+                <button id="close-about">X</button>
+            </div>                                           
+            <div class="top">                   
+                <span>                    
+                    <h1>Sobre</h1>
+                    <i>Informações do projeto</i>
+                </span>
+            </div>
+            <div class="informations">                                
+                <span>
+                    <h2>Projeto</h2>
+                    <p>Este projeto foi desenvolvido por <a href="https://www.linkedin.com/in/kesley-keven-18358a1bb/" target="_blank">Kesley Developer</a>, e tem como objetivo apresentar as ferramentas de dominio relacionadas a tecnologia para aqueles que procuram profissionais na área de tecnologia da informação(TI).</p>
+                </span>           
+                <span>                
+                    <h3>Quem é Kesley Developer?</h3>                    
+                    <p>Kesley Developer é um estudante de tecnologia, que atualmente segue estudando a área de programação e desenvolvimento.</p>
+                </span>                             
+                <span class="symbol">
+                    <img src="../imgs/about.png" alt="about symbol">
+                    <i>A cópia ou alteração deste projeto é proibida</i>
+                </span>
+            </div>                                 
+        </div>                        
+    </main>        
+    <script>                                     
+        function linksInfos(){            
+            let links = document.querySelectorAll(".list a");                                    
+            let infos = document.querySelector(".link-infos i");
+                        
+            for(let i=0;i < links.length; i+=1){
+                links[i].addEventListener("mouseover",function(){
+                    if(i == 0){
+                        infos.textContent = "Suporte focado em softwares e apoio na resolução de problemas";
+                    
+                    }else if(i == 1){
+                        infos.textContent = "Manutenção de microcomputadores e analise de situações";
+                    
+                    }else if(i == 2){
+                        infos.textContent = "Desenvolvimento back-end e front-end baseados em web e sistemas";
+                    }
+                })
+
+                links[i].addEventListener("mouseout",function(){
+                    infos.textContent = "";
+                })
+            }
+        }
+        linksInfos();        
+
+        function contactView(){
+            let open = document.querySelector("#link-contact");
+            let contact = document.querySelector(".contact");
+            let close = document.querySelector(".contact #close-contact");    
+
+            open.addEventListener("click",function(){                                
+                contact.style.height = "100px";                  
+            })
+
+            close.addEventListener("click",function(){                
+                contact.style.height = "0";                    
+            })
+        }
+        contactView();
+
+        function aboutView(){
+            let open = document.querySelector("#link-about");
+            let about = document.querySelector(".about");
+            let close = document.querySelector(".about #close-about");
+
+            open.addEventListener("click",function(){
+                about.style.display = "block";
+            })
+
+            close.addEventListener("click",function(){
+                about.style.display = "none";
+            })
+        }
+        aboutView();                
+
+        function formulary(){
+            let radBtns = document.querySelectorAll("input[type='radio']");
+            let sendBtn = document.querySelector("input[type='submit']");                                    
+
+            radBtns.forEach(radBtns => {
+                sendBtn.addEventListener("click",function(){
+                    // ON SEND FORMULARY...
+                })
+            })    
+            
+            sendBtn.addEventListener("click",function(){
+                
+            })
+                                    
+        }
+        formulary()
+    </script>
+</body>
+</html>
